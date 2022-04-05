@@ -2,6 +2,7 @@ import { Divider, Grid } from "@mui/material";
 import "../../styles/home.css";
 import Sidebar from "../Sidebar";
 import Header from "./Header";
+import Headingbar from "./Headingbar";
 const Layout = (props) => {
   return (
     <>
@@ -14,6 +15,10 @@ const Layout = (props) => {
           </div>
         </Grid>
         <Grid item md={10.5}>
+          <div className="heading-wrapper">
+            <Headingbar />
+          </div>
+
           {props.children}
         </Grid>
       </Grid>

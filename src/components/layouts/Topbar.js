@@ -1,8 +1,8 @@
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Button } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import Dropdown from "./Dropdown";
-import Search from "./Search";
+import Dropdown from "../Dropdown";
+import Search from "../Search";
 const Topbar = () => {
   return (
     <div className="topbar-wrapper">

@@ -26,6 +26,7 @@ const Sidebar = () => {
       <p>Find Filters</p>
       <Divider className="divider" sx={{ my: 0.5 }} />
       <List filters={filters} />
+      <Divider className="divider" sx={{ my: 0.5 }} />
       <p>FAVORITE FILTERS</p>
       <List filters={favFilters} />
     </div>
