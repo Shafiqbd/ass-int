@@ -83,6 +83,9 @@ p {
 .sidebar-area {
   padding: 5px 10px;
 }
+.body-wrapper {
+  margin: 10px 20px;
+}
 .heading-area-top {
   display: flex;
   align-items: center;
@@ -115,10 +118,11 @@ p {
     padding: 6px 5px !important;
   }
   & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-    padding: 5px 16px !important;
+    padding: 3px 16px !important;
+    font-size: 13px !important;
   }
   & .item {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -154,4 +158,178 @@ p {
 
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
   text-transform: capitalize !important;
+}
+
+//body
+.profile-area {
+  display: flex;
+  align-items: center;
+  & .avarter {
+    margin-right: 15px;
+  }
+  h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: gray;
+  }
+  span {
+    color: gray;
+  }
+}
+.btn-group {
+  display: flex !important;
+  align-items: center !important;
+  .btn {
+    padding: 0px 10px !important;
+    height: 30px !important;
+    text-transform: capitalize;
+    color: gray !important;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    .css-i4bv87-MuiSvgIcon-root {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+  & .MuiBox-root.css-14ajw3y {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .css-9y1egq-MuiButtonBase-root-MuiButton-root {
+    padding: 0px 10px !important;
+    height: 30px !important;
+    text-transform: capitalize;
+    color: gray !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+.export {
+  color: gray !important;
+}
+
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.css-k9h04b-MuiButtonBase-root-MuiButton-root {
+  color: gray !important;
+  padding: 8px 0px !important;
+}
+.css-zddlty-MuiButtonBase-root-MuiButton-root {
+  color: gray !important;
+}
+.btn-group-single {
+  margin-right: 15px !important;
+}
+.export-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.divide-wrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  .color {
+    color: black;
+  }
+  .hr {
+    width: 100%;
+    color: 1px solid gray;
+    overflow: hidden;
+  }
+}
+
+.type-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+.css-14jg5j8-MuiChip-root {
+  height: 25px !important;
+}
+
+.type-wrapper {
+  .css-r1hick-MuiGrid-root > .MuiGrid-item:last-child {
+    padding-top: 10px !important;
+  }
+}
+
+.submenu-area {
+  display: flex;
+  align-items: center;
+  .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    color: gray !important;
+  }
+}
+
+.table-area {
+  max-width: 400px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & .title,
+  .info {
+    text-align: left;
+    p {
+      margin: 0;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  }
+}
+.tab-area {
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    text-transform: capitalize !important;
+  }
+  & .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+  }
+  p {
+    margin: 0;
+  }
+  .desc {
+    margin-left: 30px;
+    margin-bottom: 6px;
+  }
+}
+
+.toltip-wrap {
+  & .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background-color: transparent !important;
+    color: gray !important;
+    box-shadow: none !important;
+    text-transform: capitalize !important;
+    padding-left: 0 !important;
+  }
+}
+.people-area {
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  p {
+    margin: 0;
+    margin-bottom: 6px;
+  }
+}
+.date {
+  margin-right: 40px;
 }

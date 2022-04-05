@@ -4,8 +4,8 @@ import List from "./List";
 const Sidebar = () => {
   let filters = ["My Open Issues", "Reported by Me", "Recently Viewed", "All Issues"];
   let favFilters = [
-    "Issues updated last week and",
-    "Issues updated last week and",
+    "Issues updated last week and depertment",
+    "Issues updated last week and depertment",
     "Works in progress all depertment",
     "Works in progress all depertment",
     "Works in progress all depertment",
