@@ -22,7 +22,7 @@ p {
           justify-content: space-between;
   background-color: black;
   padding: 3px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-area {
@@ -173,6 +173,7 @@ p {
 
 .name {
   font-size: 25px;
+  margin: 0;
   margin-right: 20px;
 }
 
@@ -353,18 +354,6 @@ p {
   overflow: hidden;
 }
 
-.type-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .type-area p {
   margin: 0;
 }
@@ -392,7 +381,7 @@ p {
 }
 
 .table-area {
-  max-width: 400px;
+  max-width: 280px;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,5 +467,24 @@ p {
 
 .date {
   margin-right: 40px;
+}
+
+.list-wrapper .icon {
+  padding-left: 10px;
+}
+
+.list-wrapper .css-10hburv-MuiTypography-root {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;
+  max-height: 30px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #6578d9;
+}
+
+.list-wrapper .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
+  padding-left: 0 !important;
 }
 /*# sourceMappingURL=home.css.map */

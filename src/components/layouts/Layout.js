@@ -9,12 +9,12 @@ const Layout = (props) => {
       <Header />
       <Divider className="divider" sx={{ my: 0.5 }} />
       <Grid container>
-        <Grid item md={1.5}>
+        <Grid item md={2}>
           <div className="sidebar-wrapper">
             <Sidebar />
           </div>
         </Grid>
-        <Grid item md={10.5}>
+        <Grid item md={10}>
           <div className="heading-wrapper">
             <Headingbar />
           </div>

@@ -12,7 +12,7 @@ const Body = () => {
         <ButtonGroup />
         <BtnGroup />
       </div>
-      <Grid container spacing={6}>
+      <Grid container spacing={4}>
         <Grid item md={8}>
           <Details />
         </Grid>

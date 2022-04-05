@@ -1,3 +1,4 @@
+import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -9,11 +10,14 @@ function renderRow(props) {
   const { index, style } = props;
 
   return (
-    <ListItem style={style} key={index} component="div" disablePadding>
-      <ListItemButton>
-        <ListItemText primary={`Item ${index + 1}`} />
-      </ListItemButton>
-    </ListItem>
+    <div className="list-wrapper">
+      <ListItem style={style} key={index} component="div" disablePadding>
+        <LocalAtmIcon className="icon" /> &nbsp;
+        <ListItemButton style={{ display: "block" }}>
+          <ListItemText primary={`${index + 1}9bsdfse321deb4d-3b7d${index + 1}`} />
+        </ListItemButton>
+      </ListItem>
+    </div>
   );
 }
 

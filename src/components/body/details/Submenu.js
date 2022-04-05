@@ -10,9 +10,7 @@ export default function Submenu() {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        "& > *": {
-          m: 1,
-        },
+        "& > *": {},
       }}
     >
       <ButtonGroup variant="outlined" aria-label="outlined button group">

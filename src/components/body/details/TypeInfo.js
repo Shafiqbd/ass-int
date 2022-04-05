@@ -10,24 +10,35 @@ const TypeInfo = () => {
     <div>
       {" "}
       <div className="type-wrapper">
-        <Grid container spacing={8}>
-          <Grid item md={6}>
+        <Grid container spacing={4}>
+          <Grid item md={4}>
             <div className="type-area">
               <p>Type:</p>
-              <p style={{ display: "flex", alignItems: "center" }}>
-                <LocalAtmIcon /> &nbsp; Terminal ATM
-              </p>
             </div>
           </Grid>
-          <Grid item md={6}>
+          <Grid item md={8} style={{ paddingLeft: "0" }} className="type-area">
+            <p style={{ display: "flex", alignItems: "center" }}>
+              <LocalAtmIcon /> &nbsp; Terminal ATM
+            </p>
+          </Grid>
+          <Grid item md={4} style={{ paddingTop: "10px" }}>
             <div className="type-area">
               <p>Status:</p>
+            </div>
+          </Grid>
+          <Grid item md={8} style={{ paddingLeft: "0", paddingTop: "10px" }}>
+            <div className="type-area">
               <Chip label="Closed" color="success" />
             </div>
           </Grid>
-          <Grid item md={6}>
+
+          <Grid item md={4} style={{ paddingTop: "10px" }}>
             <div className="type-area">
               <p>Priority:</p>
+            </div>
+          </Grid>
+          <Grid item md={8} style={{ paddingLeft: "0", paddingTop: "10px" }}>
+            <div className="type-area">
               <p style={{ display: "flex", alignItems: "center", marginRight: "40px" }}>
                 <ArrowDownwardIcon color="success" /> &nbsp; Regular
               </p>
@@ -36,12 +47,12 @@ const TypeInfo = () => {
         </Grid>
       </div>
       <Grid container className="submenu-area">
-        <Grid item md={3}>
+        <Grid item md={4} style={{ paddingTop: "10px" }}>
           <div className="type-area">
             <p>Sub Menu:</p>
           </div>
         </Grid>
-        <Grid item md={9}>
+        <Grid item md={8} style={{ paddingLeft: "0", paddingTop: "10px", marginLeft: "-10px" }}>
           <Submenu />
         </Grid>
       </Grid>

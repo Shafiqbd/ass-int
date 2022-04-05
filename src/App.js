@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <Layout>
         <Grid container>
-          <Grid item md={2}>
+          <Grid item md={3}>
             <OrderBy />
           </Grid>
-          <Grid item md={10}>
+          <Grid item md={9}>
             <div className="body-wrapper">
               <Body />
             </div>

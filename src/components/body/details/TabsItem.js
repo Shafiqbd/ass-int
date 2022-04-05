@@ -56,7 +56,6 @@ export default function TabsItem() {
           <Tab label="Work Log" {...a11yProps(2)} />
           <Tab label=" History" {...a11yProps(3)} />
           <Tab label="Activity" {...a11yProps(4)} />
-          <Tab label="Transition" {...a11yProps(5)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -208,43 +207,6 @@ export default function TabsItem() {
         <Divider className="hr" />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <p className="item">
-          <KeyboardArrowDownIcon /> &nbsp;
-          <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995
-          3:20AM
-        </p>
-        <p className="desc">In publishing and graphic design, Lorem ipsum is a</p>
-        <Divider className="hr" />
-        <p className="item">
-          <KeyboardArrowDownIcon /> &nbsp;
-          <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995
-          3:20AM
-        </p>
-        <p className="desc">In publishing and graphic design, Lorem ipsum is a</p>
-        <Divider className="hr" />
-        <p className="item">
-          <KeyboardArrowDownIcon /> &nbsp;
-          <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995
-          3:20AM
-        </p>
-        <p className="desc">In publishing and graphic design, Lorem ipsum is a</p>
-        <Divider className="hr" />
-        <p className="item">
-          <KeyboardArrowDownIcon /> &nbsp;
-          <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995
-          3:20AM
-        </p>
-        <p className="desc">In publishing and graphic design, Lorem ipsum is a</p>
-        <Divider className="hr" />
-        <p className="item">
-          <KeyboardArrowDownIcon /> &nbsp;
-          <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995
-          3:20AM
-        </p>
-        <p className="desc">In publishing and graphic design, Lorem ipsum is a</p>
-        <Divider className="hr" />
-      </TabPanel>
-      <TabPanel value={value} index={5}>
         <p className="item">
           <KeyboardArrowDownIcon /> &nbsp;
           <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam &nbsp; 23/05/1995

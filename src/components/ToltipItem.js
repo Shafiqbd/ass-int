@@ -22,7 +22,7 @@ export default function ToltipItem() {
   return (
     <div className="toltip-wrap">
       <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-        <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Md. Shafiqul Islam
+        <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Shafiqul
       </Button>
       <Popover
         id={id}
