@@ -15,12 +15,14 @@ const Headingbar = () => {
           <Button className="filter-btn" variant="outlined">
             Save as
           </Button>
-          <Button variant="text">Details</Button>
+          <Button className="btn" variant="text">
+            Details
+          </Button>
           <StarIcon className="star" />
         </div>
         <div className="right-area">
-          <Button className="share-btn gap" variant="text">
-            <ScreenShareIcon /> Share
+          <Button className="share-btn btn gap" variant="text">
+            <ScreenShareIcon /> &nbsp; Share
           </Button>
           <div className="export gap">
             <SystemUpdateAltIcon />
@@ -33,19 +35,14 @@ const Headingbar = () => {
         </div>
       </div>
       <div className="heading-area-bottom">
-        {/* <Dropdown name={"Project: All"} />
-        <Dropdown name={"Status: All"} />
-        <Dropdown name={"Assignee: All"} />
-        <Button className="filter-btn" variant="outlined">
-          Contain Text
-        </Button>
-        <Dropdown name={"More"} /> */}
-        <Select label={"Project"} />
+        <Select style={{ padding: "3px 16px", fontSize: "13px" }} label={"Project"} />
         <Select label={"Status"} />
         <Select label={"Assignee"} />
         <Select label={"More"} />
         <SearchIcon />
-        <Button variant="text">Advance</Button>
+        <Button className="btn" variant="text">
+          Advance
+        </Button>
       </div>
     </div>
   );

@@ -20,8 +20,8 @@ export default function ToltipItem() {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <div className="toltip-wrap">
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+    <div>
+      <Button className="toltip-wrap" aria-describedby={id} variant="contained" onClick={handleClick}>
         <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Shafiqul
       </Button>
       <Popover

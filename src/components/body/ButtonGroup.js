@@ -30,12 +30,12 @@ export default function ButtonGroups() {
         <Button className="btn" variant="outlined">
           <ChatBubbleOutlineIcon /> Comment
         </Button>
-        <ButtonGroup className="btn-group-single" size="large" aria-label="large button group">
+        <ButtonGroup className="top-btn" size="large" aria-label="large button group">
           {buttons}
         </ButtonGroup>
-        <Button className="btn" variant="outlined">
-          <Dropdown name={"Admin"} />
-        </Button>
+        {/* <Button className="btn" variant="outlined">
+          <Dropdown className="btn" name={"Admin"} />
+        </Button> */}
       </div>
     </Box>
   );

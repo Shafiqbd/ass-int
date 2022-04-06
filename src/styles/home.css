@@ -34,6 +34,10 @@ p {
           align-items: center;
 }
 
+.btn-area .MuiButton-root {
+  color: #fff !important;
+}
+
 .search-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,6 +50,7 @@ p {
 .top-btn {
   background-color: transparent !important;
   text-transform: capitalize !important;
+  color: gray !important;
 }
 
 .red-btn {
@@ -158,13 +163,14 @@ p {
   padding: 6px 5px !important;
 }
 
-.heading-area-bottom .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-  padding: 3px 16px !important;
-  font-size: 13px !important;
-}
-
 .heading-area-bottom .item {
   font-size: 12px !important;
+}
+
+.select {
+  padding: 5px 16px !important;
+  font-size: 13px !important;
+  color: gray !important;
 }
 
 .star {
@@ -219,10 +225,6 @@ p {
   margin-right: 15px !important;
 }
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-  text-transform: capitalize !important;
-}
-
 .profile-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,6 +255,7 @@ p {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
+  padding: 0px 10px !important;
 }
 
 .btn-group .btn {
@@ -312,10 +315,6 @@ p {
 .css-k9h04b-MuiButtonBase-root-MuiButton-root {
   color: gray !important;
   padding: 8px 0px !important;
-}
-
-.css-zddlty-MuiButtonBase-root-MuiButton-root {
-  color: gray !important;
 }
 
 .btn-group-single {
@@ -430,7 +429,7 @@ p {
   margin-bottom: 6px;
 }
 
-.toltip-wrap .css-sghohy-MuiButtonBase-root-MuiButton-root {
+.toltip-wrap {
   background-color: transparent !important;
   color: gray !important;
   -webkit-box-shadow: none !important;
@@ -484,7 +483,29 @@ p {
   color: #6578d9;
 }
 
-.list-wrapper .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
+.btn {
+  text-transform: capitalize !important;
+}
+
+.MuiButton-root {
+  padding: 4px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
+}
+
+.order-list {
   padding-left: 0 !important;
+}
+
+.MuiSelect-select {
+  padding: 5px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
+}
+
+.css-1ex63bw {
+  padding: 4px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
 }
 /*# sourceMappingURL=home.css.map */

@@ -2,6 +2,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import { Grid } from "@mui/material";
 import Chip from "@mui/material/Chip";
+import "../../../styles/home.css";
 import Submenu from "./Submenu";
 import TableView from "./TableView";
 

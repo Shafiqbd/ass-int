@@ -19,6 +19,9 @@ p {
 .btn-area {
   display: flex;
   align-items: center;
+  .MuiButton-root {
+    color: #fff !important;
+  }
 }
 
 .search-area {
@@ -30,6 +33,7 @@ p {
   background-color: transparent !important;
 
   text-transform: capitalize !important;
+  color: gray !important;
 }
 
 .red-btn {
@@ -117,13 +121,16 @@ p {
     color: gray !important;
     padding: 6px 5px !important;
   }
-  & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-    padding: 3px 16px !important;
-    font-size: 13px !important;
-  }
+
   & .item {
     font-size: 12px !important;
   }
+}
+
+.select {
+  padding: 5px 16px !important;
+  font-size: 13px !important;
+  color: gray !important;
 }
 
 .star {
@@ -158,10 +165,6 @@ p {
   }
 }
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-  text-transform: capitalize !important;
-}
-
 //body
 .profile-area {
   display: flex;
@@ -181,6 +184,7 @@ p {
 .btn-group {
   display: flex !important;
   align-items: center !important;
+  padding: 0px 10px !important;
   .btn {
     padding: 0px 10px !important;
     height: 30px !important;
@@ -223,9 +227,9 @@ p {
   color: gray !important;
   padding: 8px 0px !important;
 }
-.css-zddlty-MuiButtonBase-root-MuiButton-root {
-  color: gray !important;
-}
+// .css-zddlty-MuiButtonBase-root-MuiButton-root {
+//   color: gray !important;
+// }
 .btn-group-single {
   margin-right: 15px !important;
 }
@@ -308,14 +312,13 @@ p {
 }
 
 .toltip-wrap {
-  & .css-sghohy-MuiButtonBase-root-MuiButton-root {
-    background-color: transparent !important;
-    color: gray !important;
-    box-shadow: none !important;
-    text-transform: capitalize !important;
-    padding-left: 0 !important;
-  }
+  background-color: transparent !important;
+  color: gray !important;
+  box-shadow: none !important;
+  text-transform: capitalize !important;
+  padding-left: 0 !important;
 }
+
 .people-area {
   display: flex;
   justify-content: space-between;
@@ -347,7 +350,29 @@ p {
     -webkit-box-orient: vertical;
     color: #6578d9;
   }
-  .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
-    padding-left: 0 !important;
-  }
+}
+
+.btn {
+  text-transform: capitalize !important;
+}
+
+.MuiButton-root {
+  padding: 4px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
+}
+.order-list {
+  padding-left: 0 !important;
+}
+
+.MuiSelect-select {
+  padding: 5px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
+}
+
+.css-1ex63bw {
+  padding: 4px 14px !important;
+  font-size: 13px !important;
+  color: gray !important;
 }

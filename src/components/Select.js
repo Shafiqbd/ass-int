@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import * as React from "react";
+import "../styles/home.css";
 
 const currencies = [
   {
@@ -41,13 +42,12 @@ export default function Select({ label }) {
       <div>
         <TextField id="outlined-select-currency" select label={label} value={currency} onChange={handleChange}>
           {currencies.map((option) => (
-            <MenuItem className="item" key={option.value} value={option.value}>
+            <MenuItem className="item select" key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
           ))}
         </TextField>
       </div>
-      <div></div>
     </Box>
   );
 }
