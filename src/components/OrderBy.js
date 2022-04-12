@@ -1,30 +1,43 @@
-import LocalAtmIcon from "@mui/icons-material/LocalAtm";
-import Box from "@mui/material/Box";
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import { Link, List } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import * as React from "react";
-import { FixedSizeList, ListChildComponentProps } from "react-window";
+import { useNavigate } from "react-router";
 
-function renderRow(props: ListChildComponentProps) {
-  const { index, style } = props;
+export default function OrderBy() {
+  const navigate = useNavigate();
 
+  // const loadDetails = (item) => {
+  //   navigate(`9bsdfse321deb4d-3b7d${item + 1}`);
+  // };
   return (
-    <ListItem style={{ color: "gray" }} key={index} component="div" disablePadding>
-      <ListItemButton>
-        <LocalAtmIcon className="icon" /> &nbsp;
-        <ListItemText primary={`${index + 1}9bsdfse321deb4d-3b7d${index + 1}`} />
-      </ListItemButton>
-    </ListItem>
-  );
-}
-
-export default function VirtualizedList() {
-  return (
-    <Box sx={{ width: "100%", height: 400, maxWidth: 360, bgcolor: "background.paper" }}>
-      <FixedSizeList height={550} width="auto" itemSize={46} itemCount={60} overscanCount={5}>
-        {renderRow}
-      </FixedSizeList>
-    </Box>
+    <List
+      sx={{
+        width: "100%",
+        maxWidth: 360,
+        bgcolor: "background.paper",
+        position: "relative",
+        overflow: "auto",
+        maxHeight: 600,
+        "& ul": { padding: 0 },
+      }}
+      subheader={<li />}
+    >
+      {[0, 1, 2, 3, 4].map((index) => (
+        <li key={index}>
+          <ul>
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+              <Link to="#" key={item} className="order-area">
+                <ListItem className="list" key={item}>
+                  <RadioButtonCheckedIcon /> &nbsp;
+                  <ListItemText primary={`9bsdfse321deb4d-3b7d${item + 1}`} />
+                </ListItem>
+              </Link>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </List>
   );
 }

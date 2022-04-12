@@ -12,7 +12,7 @@ const Topbar = () => {
         <Dropdown name={"Projects"} />
         <Dropdown name={"Issues"} />
         <Button className="single-btn">Agile</Button>
-        <Dropdown name={"Service Desk"} />
+        {/* <Dropdown name={"Service Desk"} /> */}
         <Button className="red-btn">Create</Button>
       </div>
       <div className="search-area">

@@ -20,9 +20,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: black;
   padding: 3px 10px;
-  margin-bottom: 10px;
+  width: 100% !important;
 }
 
 .btn-area {
@@ -125,6 +124,7 @@ p {
           justify-content: space-between;
   padding: 5px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-top: 20px;
 }
 
 .heading-area-top .filter-btn {
@@ -507,5 +507,38 @@ p {
   padding: 4px 14px !important;
   font-size: 13px !important;
   color: gray !important;
+}
+
+.cust-topbar {
+  background-color: black !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.order-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  margin-bottom: 8px !important;
+}
+
+.order-area .list {
+  padding: 0 !important;
+}
+
+.MuiBox-root.css-zxdg2z {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.main-menu {
+  color: rgba(0, 0, 0, 0.87) !important;
+  text-decoration: none !important;
 }
 /*# sourceMappingURL=home.css.map */

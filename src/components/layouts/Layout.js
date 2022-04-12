@@ -1,27 +1,23 @@
-import { Divider, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import OrderBy from "../../components/OrderBy";
 import "../../styles/home.css";
-import Sidebar from "../Sidebar";
-import Header from "./Header";
-import Headingbar from "./Headingbar";
+import MainLaout from "../layouts/MainLayout";
 const Layout = (props) => {
   return (
     <>
-      <Header />
-      <Divider className="divider" sx={{ my: 0.5 }} />
-      <Grid container>
-        <Grid item md={2}>
-          <div className="sidebar-wrapper">
-            <Sidebar />
-          </div>
+      <MainLaout>
+        <Grid container className="body-wrapper">
+          <Grid item md={3}>
+            <OrderBy />
+          </Grid>
+          <Grid item md={9}>
+            <div className="body-wrapper">
+              <Outlet />
+            </div>
+          </Grid>
         </Grid>
-        <Grid item md={10}>
-          <div className="heading-wrapper">
-            <Headingbar />
-          </div>
-
-          {props.children}
-        </Grid>
-      </Grid>
+      </MainLaout>
     </>
   );
 };
