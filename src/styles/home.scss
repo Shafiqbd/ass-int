@@ -184,7 +184,7 @@ p {
 .btn-group {
   display: flex !important;
   align-items: center !important;
-  padding: 0px 10px !important;
+  padding: 0 !important;
   .btn {
     padding: 0px 10px !important;
     height: 30px !important;
@@ -244,6 +244,7 @@ p {
   overflow: hidden;
   .color {
     color: black;
+    margin: 0 0 10px 0;
   }
   .hr {
     width: 100%;
@@ -253,6 +254,7 @@ p {
 }
 
 .type-area {
+  width: 140px;
   p {
     margin: 0;
   }
@@ -262,9 +264,9 @@ p {
 }
 
 .type-wrapper {
-  .css-r1hick-MuiGrid-root > .MuiGrid-item:last-child {
-    padding-top: 10px !important;
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .submenu-area {
@@ -277,11 +279,13 @@ p {
 }
 
 .table-area {
-  max-width: 280px;
   margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  & .title {
+    width: 140px;
+  }
   & .title,
   .info {
     text-align: left;
@@ -321,7 +325,14 @@ p {
 
 .people-area {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+
+  & .title {
+    width: 140px;
+  }
+  & button {
+    margin-left: 0 !important;
+  }
 }
 .content {
   display: flex;
@@ -333,7 +344,6 @@ p {
   }
 }
 .date {
-  margin-right: 40px;
 }
 
 .list-wrapper {
@@ -357,7 +367,7 @@ p {
 }
 
 .MuiButton-root {
-  padding: 4px 14px !important;
+  // padding: 4px 14px !important;
   font-size: 13px !important;
   color: gray !important;
 }
@@ -399,4 +409,15 @@ p {
 .main-menu {
   color: rgba(0, 0, 0, 0.87) !important;
   text-decoration: none !important;
+}
+
+.css-14ajw3y > * {
+  margin-left: 0 !important;
+}
+
+.main-menu.active {
+  color: #13e913 !important;
+  & .icon {
+    color: #13e913 !important;
+  }
 }

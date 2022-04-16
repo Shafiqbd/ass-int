@@ -1,12 +1,12 @@
 import Avatar from "@mui/material/Avatar";
-const Profile = ({ name, designation, address }) => {
+const Profile = ({ profileData }) => {
   return (
     <div className="profile-area">
-      <Avatar className="avarter" alt="Remy Sharp" src="{img}" />
+      <Avatar className="avarter" alt={profileData.name} src="{img}" />
       <div>
-        <h4>{name}</h4>
+        <h4>{profileData.name}</h4>
         <span>
-          {designation}, {address}
+          {profileData.designation}, {profileData.address}
         </span>
       </div>
     </div>

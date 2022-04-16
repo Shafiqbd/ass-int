@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import "../styles/home.css";
 
-export default function ToltipItem() {
+export default function ToltipItem({ name }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -22,7 +22,7 @@ export default function ToltipItem() {
   return (
     <div>
       <Button className="toltip-wrap" aria-describedby={id} variant="contained" onClick={handleClick}>
-        <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; Shafiqul
+        <Avatar className="avarter" alt="Shafiq Sharp" src="{img}" /> &nbsp; {name}
       </Button>
       <Popover
         id={id}

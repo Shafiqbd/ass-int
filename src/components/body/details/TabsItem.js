@@ -40,7 +40,7 @@ function a11yProps(index) {
   };
 }
 
-export default function TabsItem() {
+export default function TabsItem({ TabList }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -51,11 +51,9 @@ export default function TabsItem() {
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label=" All" {...a11yProps(0)} />
-          <Tab label="Comments" {...a11yProps(1)} />
-          <Tab label="Work Log" {...a11yProps(2)} />
-          <Tab label=" History" {...a11yProps(3)} />
-          <Tab label="Activity" {...a11yProps(4)} />
+          {TabList.map((el, index) => (
+            <Tab label={el} {...a11yProps(index)} />
+          ))}
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

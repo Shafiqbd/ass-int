@@ -1,4 +1,4 @@
-const TableView = () => {
+const TableView = ({ TableData }) => {
   return (
     <div className="table-area">
       <div className="title">
@@ -12,14 +12,14 @@ const TableView = () => {
         <p>Designation: </p>
       </div>
       <div className="info">
-        <p>20283 </p>
-        <p>Md. Shafiqul Islam</p>
-        <p>Dhaka</p>
-        <p>Software Engineer </p>
-        <p>20283 </p>
-        <p>Md. Shafiqul Islam</p>
-        <p>Dhaka</p>
-        <p>Software Engineer </p>
+        <p>{TableData.id} </p>
+        <p>{TableData.name}</p>
+        <p>{TableData.address}</p>
+        <p>{TableData.designation} </p>
+        <p>{TableData.id} </p>
+        <p>{TableData.name}</p>
+        <p>{TableData.address}</p>
+        <p>{TableData.designation} </p>
       </div>
     </div>
   );

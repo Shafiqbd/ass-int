@@ -1,6 +1,6 @@
 import { Divider } from "@mui/material";
 import ToltipItem from "../../ToltipItem";
-const People = () => {
+const People = ({ peopleData }) => {
   return (
     <div>
       <div className="divide-wrap">
@@ -10,15 +10,15 @@ const People = () => {
       <div className="people-area">
         <div className="title">
           <p>Assignee:</p>
-          <p>Reporter:</p>
+          <p style={{ marginTop: "25px" }}>Reporter:</p>
           <p>Browse Group:</p>
           <p>Watches:</p>
         </div>
         <div className="item">
-          <ToltipItem />
-          <p>Shafiq</p>
-          <p>Website</p>
-          <p>TV News</p>
+          <ToltipItem name={peopleData.reporter} />
+          <p>{peopleData.reporter}</p>
+          <p>{peopleData.group}</p>
+          <p>{peopleData.watch}</p>
         </div>
       </div>
       <div className="divide-wrap">

@@ -1,16 +1,16 @@
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
-import { Link, List } from "@mui/material";
+import { List } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import * as React from "react";
 import { useNavigate } from "react-router";
 
-export default function OrderBy() {
+export default function OrderBy({ name }) {
   const navigate = useNavigate();
-
-  // const loadDetails = (item) => {
-  //   navigate(`9bsdfse321deb4d-3b7d${item + 1}`);
-  // };
+  const loadDetails = (id) => {
+    navigate(`${id}`);
+    console.log("e", id);
+  };
   return (
     <List
       sx={{
@@ -27,14 +27,15 @@ export default function OrderBy() {
       {[0, 1, 2, 3, 4].map((index) => (
         <li key={index}>
           <ul>
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-              <Link to="#" key={item} className="order-area">
-                <ListItem className="list" key={item}>
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+              let id = `${name}-deb4d-3b7d${item + 1}`;
+              return (
+                <ListItem onClick={() => loadDetails(id)} className="list" key={item}>
                   <RadioButtonCheckedIcon /> &nbsp;
-                  <ListItemText primary={`9bsdfse321deb4d-3b7d${item + 1}`} />
+                  <ListItemText primary={id} />
                 </ListItem>
-              </Link>
-            ))}
+              );
+            })}
           </ul>
         </li>
       ))}

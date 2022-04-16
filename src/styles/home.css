@@ -255,7 +255,7 @@ p {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
-  padding: 0px 10px !important;
+  padding: 0 !important;
 }
 
 .btn-group .btn {
@@ -345,12 +345,17 @@ p {
 
 .divide-wrap .color {
   color: black;
+  margin: 0 0 10px 0;
 }
 
 .divide-wrap .hr {
   width: 100%;
   color: 1px solid gray;
   overflow: hidden;
+}
+
+.type-area {
+  width: 140px;
 }
 
 .type-area p {
@@ -361,8 +366,14 @@ p {
   height: 25px !important;
 }
 
-.type-wrapper .css-r1hick-MuiGrid-root > .MuiGrid-item:last-child {
-  padding-top: 10px !important;
+.type-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
 }
 
 .submenu-area {
@@ -380,7 +391,6 @@ p {
 }
 
 .table-area {
-  max-width: 280px;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,9 +398,10 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.table-area .title {
+  width: 140px;
 }
 
 .table-area .title,
@@ -442,9 +453,17 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.people-area .title {
+  width: 140px;
+}
+
+.people-area button {
+  margin-left: 0 !important;
 }
 
 .content {
@@ -462,10 +481,6 @@ p {
 .content p {
   margin: 0;
   margin-bottom: 6px;
-}
-
-.date {
-  margin-right: 40px;
 }
 
 .list-wrapper .icon {
@@ -488,7 +503,6 @@ p {
 }
 
 .MuiButton-root {
-  padding: 4px 14px !important;
   font-size: 13px !important;
   color: gray !important;
 }
@@ -540,5 +554,17 @@ p {
 .main-menu {
   color: rgba(0, 0, 0, 0.87) !important;
   text-decoration: none !important;
+}
+
+.css-14ajw3y > * {
+  margin-left: 0 !important;
+}
+
+.main-menu.active {
+  color: #13e913 !important;
+}
+
+.main-menu.active .icon {
+  color: #13e913 !important;
 }
 /*# sourceMappingURL=home.css.map */

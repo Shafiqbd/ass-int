@@ -1,9 +1,10 @@
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import DeleteIcon from "@mui/icons-material/Delete";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import { Grid, Link } from "@mui/material";
+import { Grid } from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -17,10 +18,12 @@ import { CSSObject, styled, Theme, useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import * as React from "react";
 import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
 import "../../styles/home.css";
 import Header from "./Header";
 import Headingbar from "./Headingbar";
 import Topbar from "./Topbar";
+
 const drawerWidth = 220;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -133,11 +136,8 @@ export default function MainLaout(props) {
         </DrawerHeader>
         <Divider />
         <List>
-          <Link to="inbox" className="main-menu">
+          <NavLink to="/inbox" className="main-menu">
             <ListItemButton
-              onClick={() => {
-                navigate("inbox");
-              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -151,16 +151,13 @@ export default function MainLaout(props) {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <InboxIcon className="icon" />
               </ListItemIcon>
               <ListItemText primary="Inbox" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          </Link>
-          <Link to="starred" className="main-menu">
+          </NavLink>
+          <NavLink to="/starred" className="main-menu">
             <ListItemButton
-              onClick={() => {
-                navigate("starred");
-              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -174,16 +171,13 @@ export default function MainLaout(props) {
                   justifyContent: "center",
                 }}
               >
-                <MailIcon />
+                <MailIcon className="icon" />
               </ListItemIcon>
               <ListItemText primary="Starred" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          </Link>
-          <Link to="draft" className="main-menu">
+          </NavLink>
+          <NavLink to="/draft" className="main-menu">
             <ListItemButton
-              onClick={() => {
-                navigate("draft");
-              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -197,17 +191,16 @@ export default function MainLaout(props) {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <InboxIcon className="icon" />
               </ListItemIcon>
               <ListItemText primary="Draft" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          </Link>
+          </NavLink>
         </List>
         <Divider />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
+          <NavLink to="/all-mail" className="main-menu">
             <ListItemButton
-              key={text}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -221,11 +214,53 @@ export default function MainLaout(props) {
                   justifyContent: "center",
                 }}
               >
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <MailIcon className="icon" />
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="All Mail" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          ))}
+          </NavLink>
+
+          <NavLink to="/spam" className="main-menu">
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <InboxIcon className="icon" />
+              </ListItemIcon>
+              <ListItemText primary="Spam" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </NavLink>
+
+          <NavLink to="/trash" className="main-menu">
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <DeleteIcon className="icon" />
+              </ListItemIcon>
+              <ListItemText primary="Trash" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </NavLink>
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

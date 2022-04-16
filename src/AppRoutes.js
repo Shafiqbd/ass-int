@@ -1,42 +1,38 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router";
 import { Route, Routes } from "react-router-dom";
-import { default as Body } from "./components/body/Index";
 import Layout from "./components/layouts/Layout";
 import Loader from "./components/Loader";
+import AllMail from "./pages/AllMail";
+import DetailsPage from "./pages/DetailsPage";
+import Draft from "./pages/Draft";
+import Inbox from "./pages/Inbox";
+import Spam from "./pages/Spam";
+import Starred from "./pages/Starred";
+import Trash from "./pages/Trash";
+
 const AppRoutes = () => {
+  const navigate = useNavigate();
+  const profileData = {
+    name: "Shafiqul Islam",
+    designation: "Web Developer",
+    address: "Narail",
+    email: "<shafiq@gmail.com>",
+  };
   return (
     <Routes>
-      <Route element={<Layout /> ? <Layout /> : <Loader />}>
-        <Route
-          path="/"
-          element={
-            <Body name={"Md. Mahfuz Ahmed"} designation={"Software Engineer"} address={"Dhaka, Mohammadpur"} /> ? (
-              <Body name={"Md. Mahfuz Ahmed"} designation={"Software Engineer"} address={"Dhaka, Mohammadpur"} />
-            ) : (
-              <Loader />
-            )
-          }
-        />
-        <Route
-          path="/inbox"
-          element={
-            <Body name={"Md. Rafiqul Ahmed"} designation={"Civil Engineer"} address={"Rangpur, Rajbari"} /> ? (
-              <Body name={"Md. Rafiqul Ahmed"} designation={"Civil Engineer"} address={"Rangpur, Rajbari"} />
-            ) : (
-              <Loader />
-            )
-          }
-        ></Route>
-        <Route path="/inbox/9bsdfse321deb4d-3b7d/{:id}" element={<Body />} />
+      <Route path="/" element={<Navigate to="/inbox" replace />} />
 
-        <Route
-          path="/starred"
-          element={<Body name={"Md. Shafiqul Islam"} designation={"Web Developer"} address={"Narail, Lohagara"} />}
-        />
-        <Route
-          path="/draft"
-          element={<Body name={"Raju Khan"} designation={"Jr. Web Developer"} address={"Narail, Lohagara"} />}
-        />
+      <Route element={<Layout /> ? <Layout /> : <Loader />}>
+        <Route path="/inbox" element={<Inbox />}>
+          <Route path=":id" element={<DetailsPage profileData={profileData} />} />
+        </Route>
+        {/* <Route path="iinbox/:id" element={<DetailsPage />} /> */}
+        <Route path="/starred" element={<Starred />} />
+        <Route path="/draft" element={<Draft />} />
+        <Route path="/all-mail" element={<AllMail />} />
+        <Route path="/spam" element={<Spam />} />
+        <Route path="/trash" element={<Trash />} />
       </Route>
     </Routes>
   );
