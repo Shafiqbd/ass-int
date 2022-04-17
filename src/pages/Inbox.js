@@ -48,7 +48,7 @@ const Inbox = () => {
       </Grid>
       <Grid item md={9}>
         {id ? (
-          <Outlet profileData={profileData} />
+          <Outlet />
         ) : (
           <div className="body-wrapper">
             <Profile profileData={profileData} />

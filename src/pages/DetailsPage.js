@@ -3,12 +3,10 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import MailFrom from "../components/MailFrom";
 import "../styles/home.css";
-const DetailsPage = ({ profileData }) => {
-  // const profileData = {
-  //   name: "Shafiqul Islam",
-  //   designation: "Web Developer",
-  //   address: "Narail",
-  // };
+
+const DetailsPage = ({ inboxFromData, inboxProfileData }) => {
+  const { id } = useParams();
+
   const DetailsArea = styled.div`
     & .profile-wrap {
       display: flex;
@@ -28,31 +26,34 @@ const DetailsPage = ({ profileData }) => {
         min-width: 2px !important;
       }
     }
+    & .body {
+      line-height: 35px;
+    }
   `;
-  const { id } = useParams();
   return (
     <DetailsArea>
       <div className="body-wrapper">
-        <h2>Are you interested to join us as a ReactJS Developer?</h2>
+        <h2>
+          {id} From {inboxProfileData.name}
+        </h2>
         <div className="profile-area">
-          <Avatar className="avarter" alt={profileData.name} src="{img}" />
+          <Avatar className="avarter" alt={inboxProfileData.name} src="{img}" />
           <div className="profile-wrap">
-            <h4>{profileData.name}</h4> &nbsp;
-            <span>{profileData.email}</span>
+            <h4>{inboxProfileData.name}</h4> &nbsp;
+            <span>{inboxProfileData.email}</span>
           </div>
         </div>
         <p className="from-area">
-          to Raju <MailFrom className="icon" />
+          to Raju <MailFrom className="icon" inboxFromData={inboxFromData} />
         </p>
-        <pre>
-          Dear Sir, I beg most respectfully to state that I am a regular student of 9th semester of your university. Due
-          to family financial problems, the fall 2021 and spring 2022 semester fees could not be paid on time along with
-          the delay penalty. Fall 2021 delay penalty(1000tk) and Spring 2022 delay penalty(2000tk). Now I have paid all
-          of my due fees without late fines (3000tk). Last semester I applied but did not get considered. In this case,
-          reduce my late fine and participate in the final of spring 2022 with no late fine. Therefore, I sincerely
-          request you to grant me a waiver of delay fee considering my family in this Corona pandemic. Best Regards, Md.
-          Shafiqul Islam Department: ECSE Semester: 9 Id: 21190201181 Sec: B
-        </pre>
+        <p className="body">
+          Dear {id}, {inboxProfileData.body}
+        </p>
+        <p>Best Regards,</p>
+        <p>Id: {id}</p>
+        <p>Md. Rafiqul Islam</p>
+        <p>Department: ECSE </p>
+        <p>Semester: 9, Sec: B</p>
       </div>
     </DetailsArea>
   );

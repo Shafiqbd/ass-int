@@ -4,7 +4,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import * as React from "react";
 import { useNavigate } from "react-router";
-
+import { NavLink } from "react-router-dom";
 export default function OrderBy({ name }) {
   const navigate = useNavigate();
   const loadDetails = (id) => {
@@ -28,12 +28,14 @@ export default function OrderBy({ name }) {
         <li key={index}>
           <ul>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
-              let id = `${name}-deb4d-3b7d${item + 1}`;
+              let id = `${name}-${item + 222}-3b7d${item + 112}`;
               return (
-                <ListItem onClick={() => loadDetails(id)} className="list" key={item}>
-                  <RadioButtonCheckedIcon /> &nbsp;
-                  <ListItemText primary={id} />
-                </ListItem>
+                <NavLink to={`${id}`} className="main-menu">
+                  <ListItem className="list" key={item}>
+                    <RadioButtonCheckedIcon /> &nbsp;
+                    <ListItemText primary={id} />
+                  </ListItem>
+                </NavLink>
               );
             })}
           </ul>

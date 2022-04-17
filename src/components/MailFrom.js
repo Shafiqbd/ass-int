@@ -19,7 +19,7 @@ const FormWrap = styled.div`
   }
 `;
 
-export default function MailFrom() {
+export default function MailFrom({ inboxFromData }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
   const [placement, setPlacement] = React.useState();
@@ -40,17 +40,17 @@ export default function MailFrom() {
                 <div className="form-area">
                   <div className="title">
                     <p>From: </p>
-                    <p>to: </p>
-                    <p>date: </p>
+                    <p>To: </p>
+                    <p>Date: </p>
                     <p>Subject: </p>
                     <p>Mail by: </p>
                   </div>
                   <div className="info">
-                    <p>Shafiqul Islam shafiq523000gmail.com </p>
-                    <p> titustar@gmail.com</p>
-                    <p>Apr 14, 2022, 12:56 PM</p>
-                    <p> Application for waiver of late penalty </p>
-                    <p>gmail.com </p>
+                    <p>{inboxFromData.from} </p>
+                    <p> {inboxFromData.to}</p>
+                    <p>{inboxFromData.date}Apr 14, 2022, 12:56 PM</p>
+                    <p> {inboxFromData.subject}</p>
+                    <p>{inboxFromData.mailby} </p>
                   </div>
                 </div>
               </Paper>
