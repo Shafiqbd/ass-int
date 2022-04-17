@@ -567,4 +567,10 @@ p {
 .main-menu.active .icon {
   color: #13e913 !important;
 }
+
+#demo-customized-button,
+.MuiButtonGroup-grouped {
+  padding: 1px 5px !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
 /*# sourceMappingURL=home.css.map */
